@@ -3,7 +3,7 @@ const routes = express.Router()
 
 
 routes.get('/', function (req, res) {
-  return res.send("works")
+  return res.render("layout.njk")
 })
 
 
