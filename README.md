@@ -1,4 +1,4 @@
-# LaunchStore
+# Launchstore
 
 
 <!-- Página fictícia de receitas proposta pelo Bootcamp LaunchBase da plataforma RocketSeat. :fire:
