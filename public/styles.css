@@ -31,6 +31,30 @@ body {
   margin: 0 auto;
 }
 
+.button {
+  background-color: var(--primary-color);
+  color: white;
+  display: block;
+  margin: 16px 0px;
+  padding: 12px 16px;
+
+  width: 100%;
+  border-radius: 4px;
+  align-self: end;
+
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+
+  transition: all 0.2s;
+}
+
+button:hover{
+  background-color: #d7780b;
+}
+
 /* HEADER */
 
 header,footer {
@@ -152,4 +176,14 @@ form .item select{
   border: 1px solid #efefef;
   border-radius: 4px;
   font-size: 16px;
+}
+
+
+
+form .item textarea {
+  min-height: 150px;
+}
+
+form .fields {
+  margin-bottom: 64px;
 }
