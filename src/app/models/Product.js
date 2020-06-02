@@ -17,15 +17,18 @@ module.exports = {
       RETURNING id
     `
 
+    data.price = data.price.replace(/\D/g, "")
+
+
     const values = [
       data.category_id,
-      1,
+      data.user_id || 1,
       data.name,
       data.description,
-      data.old_price,
+      data.old_price || data.price,
       data.price,
       data.quantity,
-      data.status,
+      data.status || 1,
     ]
 
     return db.query(query, values)
