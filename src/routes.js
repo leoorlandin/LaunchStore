@@ -9,6 +9,9 @@ routes.get('/', function (req, res) {
 
 
 routes.get('/products/create', ProductController.create)
+routes.get('/products/edit/:id', ProductController.edit)
+
+
 routes.post('/products', ProductController.post)
 
 
