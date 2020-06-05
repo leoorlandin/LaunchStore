@@ -16,13 +16,13 @@
       </div>
 
 
-      <button class="button" type="submit">Atualizar</button>
+      <button class="button edit" type="submit">Atualizar</button>
 
     </form>
 
      <form action="/products?_method=DELETE" method="POST" id="form-delete">
         <input type="hidden" name="id" value="{{product.id}}">
-        <button type="submit" class="button">Deletar</button>
+        <button type="submit" class="button delete">Deletar</button>
       </form>
 
       {%include "../confirmation.njk" %}
