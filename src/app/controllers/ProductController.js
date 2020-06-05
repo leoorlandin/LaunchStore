@@ -27,13 +27,13 @@ module.exports = {
     let results = await Product.create(req.body)
     const productId = results.rows[0].id
 
-    return res.redirect(`products/edit/${productId}`)
+    return res.redirect(`products/${productId}/edit`)
 
   },
   async edit(req, res) {
 
     let results = await Product.find(req.params.id)
-    const product = results.rows[0].id
+    const product = results.rows[0]
 
     if(!product) return res.send('Product not found!')
 

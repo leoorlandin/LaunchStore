@@ -1,0 +1,33 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+  <section class="container form">
+
+    <form method="POST" action="/products?_method=PUT">
+
+      <div class="header">
+        <h3>Editar produto {{productId}}</h3>
+      </div>
+
+      <div class="fields">
+        {% include 'products/fields.njk' %}
+        <input type="hidden" name="id" value="{{product.id}}">
+      </div>
+
+
+      <button class="button" type="submit">Atualizar</button>
+
+    </form>
+
+     <form action="/products?_method=DELETE" method="POST" id="form-delete">
+        <input type="hidden" name="id" value="{{product.id}}">
+        <button type="submit" class="button">Deletar</button>
+      </form>
+
+      {%include "../confirmation.njk" %}
+
+
+  </section>
+
+{% endblock content %}
