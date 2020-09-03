@@ -132,7 +132,7 @@ nav.primary ul li a {
   display: flex;
   align-items: center;
   color: white;
-  transition: 200ms;
+  transition: 200ms ease-in-out;
 }
 
 nav.primary ul li a:hover {
