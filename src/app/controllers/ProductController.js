@@ -28,7 +28,7 @@ module.exports = {
     }
 
     if (req.files.length == 0) {
-      return res.send("Please send at least one image")
+      return res.send('Please send at least one image')
     }
 
     let results = await Product.create(req.body)
@@ -41,7 +41,7 @@ module.exports = {
 
     await Promise.all(filesPromise)
 
-    return res.redirect(`products/${productId}`)
+    return res.redirect(`products/${productId}/edit`)
 
   },
   async edit(req, res) {
