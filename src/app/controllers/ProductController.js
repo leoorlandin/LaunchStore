@@ -80,6 +80,14 @@ module.exports = {
       }
     }
 
+    if (req.files.length != 0) {
+      const newFilesPromise = req.files.map(file => {
+        File.create({ ...file, product_id: req.body.id })
+      })
+
+      await Promise.all(newFilesPromise)
+    }
+
     if (req.body.removed_files) {
       const removed_files = req.body.removed_files.split(",")
       const lastIndex = removed_files.length - 1
