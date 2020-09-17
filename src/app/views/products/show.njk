@@ -3,13 +3,35 @@
 {% block content %}
 
   <section class="product-single container">
+
+
     <div class="gallery">
-      <img src="http://placehold.it/500x500?text=PRODUTO SEM FOTO">
+      <div class="highlight">
+        {% if not files[0] %}
+          <img src="http://placehold.it/500x500?text=PRODUTO SEM FOTO">        
+        {% else %}
+        <img src="{{files[0].src}}" alt="{{files[0].name}}">
+        {% endif %}
+      </div>
+
+      <div class="gallery-preview">
+        {% for image in files %}
+          <img 
+            src="{{image.src}}" 
+            alt="{{image.name}}"
+            {% if loop.index0 == 0 %}
+              class="active"
+            {% endif %}
+          >
+        {% endfor %}
+      </div>
     </div>
+
+
     <div class="info">
       <h1>{{product.name}}</h1>
       <div class="published">
-        Publicado em {{product.published.day}} {{product.published.hour}}
+        Publicado em {{product.published.day}} às {{product.published.hour}}
       </div>
       <div class="description">
         {{product.description}}

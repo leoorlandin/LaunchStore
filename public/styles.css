@@ -406,3 +406,11 @@ form .item #photos-preview img {
   font-size: 14px;
   letter-spacing: .4px;
 }
+
+.product-single .price-buy  .unavailable{
+  font-weight: bold;
+  color: #333;
+  font-size: 18px;
+}
+
+/* PRODUCT GALLERY */
